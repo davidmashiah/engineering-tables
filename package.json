@@ -1,6 +1,6 @@
 {
   "name": "engineering-tables",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Steam tables (IAPWS-IF97), Student's t and chi-square critical values, the normal CDF and engineering unit conversion. Zero dependencies, verified against published values.",
   "type": "module",
   "exports": {

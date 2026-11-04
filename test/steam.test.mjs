@@ -44,3 +44,15 @@ test('out-of-range states throw instead of returning a wrong number', () => {
   assert.throws(() => tsat(30), RangeError)
   assert.throws(() => region2(500, 0), RangeError)
 })
+
+import { stateTP } from '../src/steam.js'
+
+test('stateTP picks the phase and matches the verification values', () => {
+  let s = stateTP(300, 3)
+  assert.equal(s.phase, 'liquid'); rel(s.h, 0.115331273e3)
+  s = stateTP(700, 30)
+  assert.equal(s.phase, 'vapour'); rel(s.h, 0.263149474e4)
+  assert.equal(stateTP(573.15, 1).phase, 'vapour')
+  assert.equal(stateTP(650, 25).phase, 'critical')
+  assert.equal(stateTP(1200, 1).phase, 'range')
+})

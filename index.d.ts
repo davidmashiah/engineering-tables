@@ -44,3 +44,12 @@ export type UnitCategory = 'pressure' | 'energy' | 'power' | 'force' | 'torque'
 export const UNITS: Record<UnitCategory, Record<string, number>>
 /** Convert value between two units of one category. NaN for an unknown unit or a non-finite value. */
 export function convert(category: UnitCategory, value: number, from: string, to: string): number
+
+/** Phase and properties of water at T in K and p in MPa. 'critical' and 'range' carry no properties. */
+export type StateTP =
+  | ({ phase: 'liquid' | 'vapour' } & State)
+  | { phase: 'critical' | 'range' }
+/** Water or steam at T in K and p in MPa: compressed liquid (region 1) or vapour (region 2). */
+export function stateTP(T: number, p: number): StateTP
+/** Lowest temperature in K at which region 2 applies at pressure p in MPa. */
+export function region2From(p: number): number

@@ -99,3 +99,18 @@ export function saturated(T) {
   const p = psat(T), f = region1(T, p), g = region2(T, p)
   return { T, p, vf: f.v, vg: g.v, hf: f.h, hg: g.h, hfg: g.h - f.h, sf: f.s, sg: g.s, sfg: g.s - f.s }
 }
+
+/** Lower temperature edge (K) of region 2 at pressure p (MPa): saturation up to 16.529 MPa, the B23 line above. */
+export const region2From = (p) => (p > 16.5292 ? 572.54459862746 + Math.sqrt((p - 13.91883977887) / 0.0010192970039326) : tsat(p))
+
+/**
+ * Water or steam at temperature T (K) and pressure p (MPa): its phase and v, h, s.
+ * `phase` is 'liquid' (region 1), 'vapour' (region 2), 'critical' for the
+ * near-critical region 3 this library does not cover, or 'range' outside IF97.
+ */
+export function stateTP(T, p) {
+  if (!(T >= 273.15 && T <= 1073.15) || !(p > 0 && p <= 100)) return { phase: 'range' }
+  if (T <= 623.15 && p >= psat(T)) return { phase: 'liquid', ...region1(T, p) }
+  if (T > region2From(p) || (T <= 623.15 && p < psat(T))) return { phase: 'vapour', ...region2(T, p) }
+  return { phase: 'critical' }
+}

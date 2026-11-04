@@ -15,7 +15,9 @@ The same code computes the printable tables on [taueng.com](https://taueng.com/e
 the [saturated steam tables](https://taueng.com/en/tables/steam-tables/),
 the [t-table](https://taueng.com/en/tables/t-distribution/),
 the [chi-square table](https://taueng.com/en/tables/chi-square/) and
-the [Z-table](https://taueng.com/en/tables/normal-distribution/).
+the [Z-table](https://taueng.com/en/tables/normal-distribution/), the
+[superheated steam tables](https://taueng.com/en/tables/superheated-steam-tables/), and an interactive
+[steam calculator](https://taueng.com/en/tools/steam/).
 
 ## Install
 
@@ -50,6 +52,7 @@ convert('pressure', 30, 'psi', 'bar') // 2.0684
 | `saturated(T)` | `{ T, p, vf, vg, hf, hg, hfg, sf, sg, sfg }` at T in K (273.15 to 623.15 K) |
 | `psat(T)`, `tsat(p)` | Saturation pressure (MPa) at T (K), saturation temperature (K) at p (MPa) |
 | `region1(T, p)`, `region2(T, p)` | `{ v, h, s }` for compressed liquid and for vapour |
+| `stateTP(T, p)` | Phase (`liquid`, `vapour`, or `critical`/`range` when not covered) with `v, h, s` at T in K and p in MPa |
 | `tCdf(t, df)`, `tCritical(alpha, df)` | Student's t CDF, and t with `P(T > t) = alpha` |
 | `chi2Cdf(x, df)`, `chi2Critical(alpha, df)` | Chi-square CDF, and x with `P(X > x) = alpha` |
 | `phi(z)`, `erf(x)` | Standard normal CDF and the error function |
