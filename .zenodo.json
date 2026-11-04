@@ -1,0 +1,41 @@
+{
+  "upload_type": "software",
+  "title": "engineering-tables: steam tables (IAPWS-IF97), t and chi-square distributions, normal CDF and unit conversion in JavaScript",
+  "creators": [
+    {
+      "name": "Mashiah, David",
+      "affiliation": "Tel Aviv University",
+      "orcid": "0009-0004-4684-955X"
+    }
+  ],
+  "description": "<p>Zero-dependency JavaScript library for engineering reference values: saturated water and steam properties from IAPWS-IF97 regions 1, 2 and 4, Student's t and chi-square CDFs and critical values, the standard normal CDF, and unit conversion for pressure, energy, power, force and torque.</p><p>The test suite checks every function against published reference values, including the verification tables in the IAPWS-IF97 release, which the implementation reproduces to 8 significant figures.</p><p>Also on npm as <a href=\"https://www.npmjs.com/package/engineering-tables\">engineering-tables</a>. The tables it computes are published as a dataset, <a href=\"https://doi.org/10.5281/zenodo.23936027\">doi:10.5281/zenodo.23936027</a>. Author: <a href=\"https://davidmashiah.com\">David Mashiah</a>.</p>",
+  "license": "MIT",
+  "keywords": [
+    "steam tables",
+    "IAPWS-IF97",
+    "thermodynamics",
+    "t-distribution",
+    "chi-square",
+    "normal distribution",
+    "unit conversion",
+    "JavaScript"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23936027",
+      "relation": "compiles",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.npmjs.com/package/engineering-tables",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://taueng.com/en/tables/steam-tables/",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
