@@ -51,5 +51,12 @@ export type StateTP =
   | { phase: 'critical' | 'range' }
 /** Water or steam at T in K and p in MPa: compressed liquid (region 1) or vapour (region 2). */
 export function stateTP(T: number, p: number): StateTP
+
+/** Viscosity of water or steam (IAPWS R12-08, industrial form). mu in Pa·s, nu in m²/s, rho in kg/m³. */
+export interface Viscosity { phase: 'liquid' | 'vapour' | 'critical' | 'range'; rho?: number; mu?: number; nu?: number }
+/** Viscosity at T in K and p in MPa, with density from IAPWS-IF97. */
+export function viscosity(T: number, p: number): Viscosity
+/** Dynamic viscosity (Pa·s) from T in K and density in kg/m³. */
+export function viscosityTRho(T: number, rho: number): number
 /** Lowest temperature in K at which region 2 applies at pressure p in MPa. */
 export function region2From(p: number): number

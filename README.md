@@ -7,6 +7,8 @@ published reference values.
 - **Steam and water properties** from IAPWS-IF97: saturation pressure and
   temperature, and specific volume, enthalpy and entropy of liquid and vapour.
   Matches the verification values in the IAPWS-IF97 release to 8 significant figures.
+- **Viscosity of water and steam** from IAPWS R12-08 (2008), dynamic and kinematic,
+  matching every verification value in the release's Table 4.
 - **Student's t and chi-square** distributions: CDFs and critical values.
 - **Standard normal** CDF, `Φ(z)`.
 - **Unit conversion** for pressure, energy, power, force and torque, from exact definitions.
@@ -53,6 +55,8 @@ convert('pressure', 30, 'psi', 'bar') // 2.0684
 | `psat(T)`, `tsat(p)` | Saturation pressure (MPa) at T (K), saturation temperature (K) at p (MPa) |
 | `region1(T, p)`, `region2(T, p)` | `{ v, h, s }` for compressed liquid and for vapour |
 | `stateTP(T, p)` | Phase (`liquid`, `vapour`, or `critical`/`range` when not covered) with `v, h, s` at T in K and p in MPa |
+| `viscosity(T, p)` | `{ phase, rho, mu, nu }`: dynamic viscosity (Pa·s) and kinematic viscosity (m²/s) of water or steam, IAPWS R12-08 with IF97 density |
+| `viscosityTRho(T, rho)` | Dynamic viscosity (Pa·s) from T in K and density in kg/m³ |
 | `tCdf(t, df)`, `tCritical(alpha, df)` | Student's t CDF, and t with `P(T > t) = alpha` |
 | `chi2Cdf(x, df)`, `chi2Critical(alpha, df)` | Chi-square CDF, and x with `P(X > x) = alpha` |
 | `phi(z)`, `erf(x)` | Standard normal CDF and the error function |

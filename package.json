@@ -1,6 +1,6 @@
 {
   "name": "engineering-tables",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Steam tables (IAPWS-IF97), Student's t and chi-square critical values, the normal CDF and engineering unit conversion. Zero dependencies, verified against published values.",
   "type": "module",
   "exports": {
@@ -11,7 +11,8 @@
     "./steam": "./src/steam.js",
     "./distributions": "./src/dist.js",
     "./normal": "./src/stats.js",
-    "./units": "./src/units.js"
+    "./units": "./src/units.js",
+    "./viscosity": "./src/viscosity.js"
   },
   "files": [
     "index.js",
@@ -39,7 +40,10 @@
     "statistics",
     "normal distribution",
     "unit conversion",
-    "engineering"
+    "engineering",
+    "viscosity",
+    "viscosity of water",
+    "iapws 2008"
   ],
   "author": "David Mashiah (https://davidmashiah.com)",
   "license": "MIT",
