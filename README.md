@@ -80,6 +80,9 @@ Mashiah, D. (2026). Engineering reference tables: saturated steam (IAPWS-IF97), 
 chi-square and standard normal values, and unit conversion factors. Zenodo.
 https://doi.org/10.5281/zenodo.23936027
 
+To cite the software itself: Mashiah, D. (2026). engineering-tables. Zenodo.
+https://doi.org/10.5281/zenodo.23939106
+
 ## Author
 
 [David Mashiah](https://davidmashiah.com), mechanical engineering student at

@@ -30,3 +30,7 @@ preferred-citation:
   publisher:
     name: "Zenodo"
   year: 2026
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23939106"
+    description: "The software (all versions)"
