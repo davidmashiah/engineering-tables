@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software or its tables, please cite the dataset below."
+title: "engineering-tables"
+abstract: "Steam tables (IAPWS-IF97), Student's t and chi-square critical values, the standard normal CDF and engineering unit conversion in zero-dependency JavaScript, verified against published reference values."
+type: software
+authors:
+  - family-names: "Mashiah"
+    given-names: "David"
+    orcid: "https://orcid.org/0009-0004-4684-955X"
+    website: "https://davidmashiah.com"
+repository-code: "https://github.com/davidmashiah/engineering-tables"
+url: "https://taueng.com/en/tables/steam-tables/"
+license: MIT
+version: "1.0.0"
+date-released: "2026-11-04"
+keywords:
+  - steam tables
+  - IAPWS-IF97
+  - thermodynamics
+  - statistics
+  - unit conversion
+preferred-citation:
+  type: dataset
+  title: "Engineering reference tables: saturated steam (IAPWS-IF97), Student's t, chi-square and standard normal values, and unit conversion factors"
+  authors:
+    - family-names: "Mashiah"
+      given-names: "David"
+      orcid: "https://orcid.org/0009-0004-4684-955X"
+  doi: "10.5281/zenodo.23936027"
+  publisher:
+    name: "Zenodo"
+  year: 2026
