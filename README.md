@@ -66,6 +66,17 @@ energy and entropy of saturated liquid are zero at the triple point).
 and 4, published t and chi-square critical values, the standard normal table and
 exact unit definitions.
 
+## Data
+
+The tables computed with this library are published as a citable CSV dataset on Zenodo:
+[doi.org/10.5281/zenodo.23936027](https://doi.org/10.5281/zenodo.23936027).
+
+## Cite
+
+Mashiah, D. (2026). Engineering reference tables: saturated steam (IAPWS-IF97), Student's t,
+chi-square and standard normal values, and unit conversion factors. Zenodo.
+https://doi.org/10.5281/zenodo.23936027
+
 ## Author
 
 [David Mashiah](https://davidmashiah.com), mechanical engineering student at
