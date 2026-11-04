@@ -1,0 +1,59 @@
+{
+  "name": "engineering-tables",
+  "version": "1.0.0",
+  "description": "Steam tables (IAPWS-IF97), Student's t and chi-square critical values, the normal CDF and engineering unit conversion. Zero dependencies, verified against published values.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./steam": "./src/steam.js",
+    "./distributions": "./src/dist.js",
+    "./normal": "./src/stats.js",
+    "./units": "./src/units.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "steam tables",
+    "iapws-if97",
+    "iapws",
+    "water",
+    "steam",
+    "thermodynamics",
+    "saturation pressure",
+    "enthalpy",
+    "entropy",
+    "t-distribution",
+    "t-table",
+    "chi-square",
+    "statistics",
+    "normal distribution",
+    "unit conversion",
+    "engineering"
+  ],
+  "author": "David Mashiah (https://davidmashiah.com)",
+  "license": "MIT",
+  "homepage": "https://taueng.com/en/tables/steam-tables/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmashiah/engineering-tables.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidmashiah/engineering-tables/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "types": "./index.d.ts",
+  "sideEffects": false
+}
